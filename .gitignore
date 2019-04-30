@@ -1,0 +1,8 @@
+.DS_STORE
+
+*.elf
+*.bin
+*.o
+*.dis
+*.sym
+*.swp
