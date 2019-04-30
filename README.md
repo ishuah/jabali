@@ -1,5 +1,9 @@
 # Jabali
 
-This project picks up from where [https://github.com/cfenollosa/os-tutorial](https://github.com/cfenollosa/os-tutorial) left off.
+"What I cannot create, I do not understand" - Richard Feynman
 
-This repo will contain the working project, I will open PRs on cfenollosa/os-tutorial with new chapters as the project progresses.
+Jabali is an x86 operating system built as a learning project from the following sources:
+
+1. [https://github.com/cfenollosa/os-tutorial](https://github.com/cfenollosa/os-tutorial) - Carlos Fenollosa
+2. [https://littleosbook.github.io/](https://littleosbook.github.io/) - Erik Helin, Adam Renberg
+3. [http://www.brokenthorn.com/Resources/OSDevIndex.html](http://www.brokenthorn.com/Resources/OSDevIndex.html) - BrokenThorn Entertainment 
