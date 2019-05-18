@@ -6,3 +6,8 @@
 *.dis
 *.sym
 *.swp
+*.iso
+
+*.log
+
+*.sublime-*
