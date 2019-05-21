@@ -9,5 +9,6 @@
 *.iso
 
 *.log
+bochslog.txt
 
 *.sublime-*
