@@ -12,7 +12,7 @@
 #define FB_WHITE                15
 
 /** fb_write_cell:
- *  Writes a character with the given foreground and background to position i
+ *  Writes a char array with the given foreground and background to position i
  *  in the framebuffer.
  *
  *  @param i  The location in the framebuffer
