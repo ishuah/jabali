@@ -31,3 +31,16 @@ void fb_write_cell(unsigned int i, char c[], unsigned char fg, unsigned char bg)
         fb_write_cell(i, c, fg, bg); 
     }
 }
+
+ /** fb_move_cursor:
+ *  Moves the cursor of the framebuffer to the given position
+ *
+ *  @param pos The new position of the cursor
+ */
+void fb_move_cursor(unsigned short pos)
+{
+    outb(FB_COMMAND_PORT, FB_HIGH_BYTE_COMMAND);
+    outb(FB_DATA_PORT,    ((pos >> 8) & 0x00FF));
+    outb(FB_COMMAND_PORT, FB_LOW_BYTE_COMMAND);
+    outb(FB_DATA_PORT,    pos & 0x00FF);
+}
