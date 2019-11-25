@@ -1,8 +1,9 @@
 #include "framebuffer_driver.c"
 
 int kmain() {
-	char s[] = "Welcome to Jabali!";
-	fb_write_cell(0, s, FB_BLACK, FB_WHITE);
-	fb_move_cursor(17);
+	char header[] = "Jabali";
+	char byline[] = "Be brave enough to suck at something new.";
+	fb_write(header, sizeof(header));
+	fb_write(byline, sizeof(byline));
 	return 0;
 }
