@@ -10,5 +10,6 @@
 
 *.log
 bochslog.txt
+*.out
 
 *.sublime-*

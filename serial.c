@@ -9,7 +9,7 @@
 
 #define SERIAL_COM1_BASE                0x3F8      /* COM1 base port */
 
-#define SERIAL_DATA_PORT(base)          (base)
+#define SERIAL_DATA_PORT(base)          (base + 1)
 #define SERIAL_FIFO_COMMAND_PORT(base)  (base + 2)
 #define SERIAL_LINE_COMMAND_PORT(base)  (base + 3)
 #define SERIAL_MODEM_COMMAND_PORT(base) (base + 4)
@@ -69,4 +69,13 @@ int serial_is_transmit_fifo_empty(unsigned int com)
 {
     /* 0x20 = 0010 0000 */
     return inb(SERIAL_LINE_STATUS_PORT(com)) & 0x20;
+}
+
+int serial_write(unsigned short com, char *buf, unsigned int len) {
+	unsigned int i;
+	for(i=0; i<len; i++) {
+		while(serial_is_transmit_fifo_empty(com) == 0);
+		outb(com, buf[i]);
+	}
+	return len;
 }
