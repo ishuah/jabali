@@ -12,6 +12,7 @@
 #define FB_WHITE                15
 
 unsigned short fb_cursor_pos = 0x00000000;
+char *fb = (char *) 0x000B8000;
 
 /** fb_write_cell:
  *  Writes a char with the given foreground and background to position i
@@ -24,7 +25,6 @@ unsigned short fb_cursor_pos = 0x00000000;
  */
 void fb_write_cell(unsigned int i, char key, unsigned char fg, unsigned char bg)
 {
-    char *fb = (char *) 0x000B8000;
     fb[i * 2] = key;
     fb[i * 2 + 1] = ((fg & 0x0F) << 4) | (bg & 0x0F);
 }
